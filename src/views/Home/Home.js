@@ -7,14 +7,36 @@ import './Home.css'
 function Home() {
     
   const [prodata, setProdata] = useState(data.products);
+  const [search,setSearch]=useState('');
 
-  useEffect(() => {
-    setProdata(data.products);
-  }, []);
+  useEffect(()=>{
+    const filterdata = prodata.filter((product)=>{
+      const title =product.title.toLocaleLowerCase();
+      const category =product.category.toLocaleLowerCase();
+
+      const query= search.toLocaleLowerCase();
+      
+      return(
+        title.includes(query) || category.includes(query)
+      )
+    
+    })
+    setProdata(filterdata)
+  },[search])
+
   return (
     <div>
       <Navbar />
+      <input type="text" 
+      placeholder="Search" 
+      className="d-block mx-auto  col-8  col-sm-6 search-bar"
+      value={search}
+       onChange={((e)=>{
+        setSearch(e.target.value)
+       })}
+      />
       <div className="d-flex  justify-content-evenly flex-wrap p-3">
+      
       {prodata?.map((product, index) => {
         const {
           id,
@@ -29,6 +51,7 @@ function Home() {
           thumbnail,
           images,
         } = product;
+        
 
         return (
           <div key={index} className="product-card m-3" >
@@ -36,10 +59,12 @@ function Home() {
             discountPercentage={discountPercentage}
             rating={rating} stock={stock} brand={brand} category={category} thumbnail={thumbnail} images={images}/>
           </div>
+      
         );
       })}
       </div>
     </div>
+    
   );
 }
 

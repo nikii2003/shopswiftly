@@ -1,7 +1,31 @@
 .product-image {
         width: 100%; 
         height: auto; 
-        max-height: 200px; 
-        object-fit: cover; 
+        max-height: 200px;
+        object-fit: cover;        
+}
+    .text{
+        font-size: 20px;
+    }
+    .text-color-rs{
+        color: red;
+    }
+    .text-color-dp{
+        font-size: 15px;
+        background-color: rgb(252, 252, 228);
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-top: 3px;
+        border-radius: 3px;
+        color: rgb(17, 167, 24);
+        text-align: center;
+    }
+    .add-to-cart-btn{
+        background-color: rgb(105, 4, 105);
+        color: white;
+        border: none;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 20px 5px 5px 20px ;
     }
     

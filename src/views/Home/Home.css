@@ -4,4 +4,13 @@
     padding: 10px;
     margin: 10px;
     border-radius: 3px;
+    position: relative;
+}
+.search-bar{
+    width: 600px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 0.5px solid rgb(211, 211, 205);
+    outline: none;
 }
