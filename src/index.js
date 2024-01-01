@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { useParams } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import AddToCart from './views/AddToCart/AddToCart';
 
 
 const {id}=useParams
@@ -23,6 +24,10 @@ const router = createBrowserRouter ([
   {
     path : '/login',
     element :<Login/>
+  },
+  {
+    path : `/post/read/:id`,
+    element :<AddToCart/>
   }
 ])
 

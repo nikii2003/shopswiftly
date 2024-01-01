@@ -11,13 +11,13 @@ function Home() {
 
   useEffect(()=>{
     const filterdata = prodata.filter((product)=>{
-      const title =product.title.toLocaleLowerCase();
-      const category =product.category.toLocaleLowerCase();
+      const title = product.title.toLocaleLowerCase();
+      const price = String(product.price).toLowerCase();
 
       const query= search.toLocaleLowerCase();
       
       return(
-        title.includes(query) || category.includes(query)
+        title.includes(query) || price.includes(query)
       )
     
     })

@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 import { BsFillGiftFill } from 'react-icons/bs';
 import ProductRating from "../ProductRatings/ProductRatings";
+import { Link } from "react-router-dom";
 
 
 function ProductCard({
@@ -39,7 +40,7 @@ function ProductCard({
     <div className="d-flex justify-content-evenly mt-4">
     <ProductRating rating={rating} />
     
-       <button type="button" className="add-to-cart-btn">ADD TO CART</button>
+       <Link to={`/post/read/${id}`} className="add-to-cart-btn">ADD TO CART</Link>
     </div>
     </div>
     </div>

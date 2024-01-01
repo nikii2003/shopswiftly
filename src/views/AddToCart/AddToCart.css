@@ -1,0 +1,19 @@
+.container-add-to-cart{
+    margin: 10px;
+    box-shadow: 1px 1px 5px 1px rgb(173, 173, 173);
+}
+.product-details-container{
+    padding: 40px;
+}
+.image-container{
+    padding: 40px;
+}
+.related-images-container{
+    height: 70px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.dis-count-text{
+margin-left: 20px;
+}
