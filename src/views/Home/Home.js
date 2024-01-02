@@ -3,9 +3,20 @@ import Navbar from "../../components/Navbar/Navbar";
 import data from "./data.json";
 import { ProductCard } from "../../components/ProductCard/ProductCard";
 import './Home.css'
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
+  const [user,setUser]=useState('')
+  useEffect (()=>{
+    const storageuser = JSON.parse(localStorage.getItem("user") || '{}');
+    if(storageuser?.email){
+    setUser(storageuser)
+    }else{
+        alert("you are not logged in !");
+        window.location.href="/login"
+    }
     
+    },[user])
   const [prodata, setProdata] = useState(data.products);
   const [search,setSearch]=useState('');
 
@@ -23,7 +34,7 @@ function Home() {
     })
     setProdata(filterdata)
   },[search])
-
+  
   return (
     <div>
       <Navbar />
@@ -63,8 +74,9 @@ function Home() {
         );
       })}
       </div>
+      <Footer/>
     </div>
-    
+  
   );
 }
 

@@ -6,15 +6,15 @@ import Signup from './views/Signup/Signup';
 import Login from './views/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-import { useParams } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import AddToCart from './views/AddToCart/AddToCart';
+import MyProduct from './views/MyProduct/MyProduct';
 
 
-const {id}=useParams
+
 const router = createBrowserRouter ([
   {
-    path : `/`,
+    path : "/",
     element :<Home/>
   },
   {
@@ -28,6 +28,10 @@ const router = createBrowserRouter ([
   {
     path : `/post/read/:id`,
     element :<AddToCart/>
+  },
+  {
+    path : `/myproduct`,
+    element :<MyProduct/>
   }
 ])
 
