@@ -6,8 +6,6 @@ import showToast from 'crunchy-toast';
 import { Link } from 'react-router-dom';
 
 function Login() {
-
- 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -25,7 +23,7 @@ function Login() {
       (showToast('Invalid Email Or Password..?', 'alert', 3000));
     }
   }
-
+ 
   return (
     <>
       <Navbar />

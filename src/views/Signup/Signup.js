@@ -3,15 +3,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import  showToast  from "crunchy-toast";
 import './Signup.css'
 import { Link } from "react-router-dom";
-function Signup() {
 
-  useEffect(()=>{
-    const storageuser = JSON.parse(localStorage.getItem("user" || '{}'));
-    if(storageuser?.email){
-      alert("you aready register here !");
-      window.location.href="/login"
-    }
-    },[])
+function Signup() {
+  
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -48,8 +42,8 @@ function Signup() {
     setEmail('');
     setPassword('');
     setMobile('');
-
-    window.location.href="/login"
+  
+    
     
   }
   return (

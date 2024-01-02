@@ -33,9 +33,19 @@ function Navbar() {
         <Link className="nav-link" to="/signup">Signup</Link>
         <Link className="nav-link" to="/login">Login</Link>
         <Link className="nav-link" to="/myproduct ">MyProduct</Link>
-        <button className='btn btn-primary' onClick={handleLogout}>Logout</button>
-       <span className='user'>{user ? <p className=''>Hello,{user.name} 😜</p> : <p> Hello,User 😜</p>}</span>
         
+       <span className='user'>{user ? <p className=''>Hello,{user.name} 😜</p> : <p> Hello,User 😜</p>}</span>
+       {user?.name ? (
+            <span
+              className="navbar-logout"
+              onClick={() => {
+                localStorage.removeItem("user");
+                window.location.href = "/login" ;
+              }}
+            >
+              <span className="btn btn-primary" onClick={handleLogout}>Logout</span>
+            </span>
+          ) : null}
       </div>
     </div>
   </div>
