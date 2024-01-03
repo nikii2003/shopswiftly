@@ -5,6 +5,7 @@ import './Signup.css'
 import { Link } from "react-router-dom";
 
 function Signup() {
+<<<<<<< HEAD
   useEffect(()=>{
     const storageUser = JSON.parse(localStorage.getItem("user") || `{}` );
     if(storageUser?.email){
@@ -12,6 +13,9 @@ function Signup() {
        window.location.href="/"
     }  
    },[])
+=======
+  
+>>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -44,7 +48,10 @@ function Signup() {
     localStorage.setItem("user",JSON.stringify(user));
 
     showToast('Sign Up Succesfully', 'success', 3000);
+<<<<<<< HEAD
     window.location.href="/login"
+=======
+>>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
     setName('');
     setEmail('');
     setPassword('');
