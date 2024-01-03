@@ -9,11 +9,7 @@ function Footer() {
         <div>
          <img src={logo } className='logo-png'/>
           <p className='About-content'>
-<<<<<<< HEAD
          Welcome to ShopSwiftly, your trusted platform to facilitate easy access to product when you need it the most.Our mission is to ensure a seamless experience in finding and obtaining product, </p>
-=======
-         Welcome to RED LIFE SAVER, your trusted platform to facilitate easy access to blood when you need it the most.Our mission is to ensure a seamless experience in finding and obtaining blood, connecting donors with those in </p>
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
         </div>
        
         <div className='mt-5'>
@@ -21,11 +17,7 @@ function Footer() {
           <p> <Link to="/" className='text-decoration'>Home</Link></p>
           <p><Link to="/Signup" className='text-decoration'>Login</Link></p>
           <p><Link to="/login" className='text-decoration'>Signup</Link></p>
-<<<<<<< HEAD
          
-=======
-          <p><Link to="/myproducts" className='text-decoration'>MyProduct</Link></p>
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
         </div>
         <div  className='mt-5'>
           <h2>Contact Info</h2>

@@ -6,26 +6,17 @@ import showToast from 'crunchy-toast';
 import { Link } from 'react-router-dom';
 
 function Login() {
-<<<<<<< HEAD
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
  
-=======
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
   const handleLogin = () => {
 
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (user.email === email && user.password === password) {
       localStorage.setItem("currentuser", JSON.stringify(user));
-<<<<<<< HEAD
 
-=======
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
      showToast(' Login Success!', 'success', 2000)
       window.location.href = "/"
       
@@ -34,7 +25,6 @@ function Login() {
       (showToast('Invalid Email Or Password..?', 'alert', 3000));
     }
   }
-<<<<<<< HEAD
 
   // const random = ()=>{
   //  const randontoken = Math.random() * 1000 ;
@@ -42,9 +32,6 @@ function Login() {
   // }
   // console.log(random)
 
-=======
- 
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
   return (
     <>
       <Navbar />
@@ -87,10 +74,7 @@ function Login() {
             >
               Login
             </button>
-<<<<<<< HEAD
             
-=======
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
             <p className='text-center'>You have no account <Link to="/signup" className='link-signup'>Sign up</Link></p>
           </div>
         </form>
