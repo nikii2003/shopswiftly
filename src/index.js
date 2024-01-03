@@ -28,13 +28,12 @@ const router = createBrowserRouter ([
   {
     path : `/post/read/:id`,
     element :<AddToCart/>
-<<<<<<< HEAD
-=======
+
   },
   {
     path : `/myproduct`,
     element :<MyProduct/>
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
+
   }
 ])
 
