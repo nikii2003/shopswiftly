@@ -32,11 +32,9 @@ function Navbar() {
         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         <Link className="nav-link" to="/signup">Signup</Link>
         <Link className="nav-link" to="/login">Login</Link>
-<<<<<<< HEAD
+
         
-=======
-        <Link className="nav-link" to="/myproduct ">MyProduct</Link>
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
+
         
        <span className='user'>{user ? <p className=''>Hello,{user.name} 😜</p> : <p> Hello,User 😜</p>}</span>
        {user?.name ? (
@@ -47,11 +45,11 @@ function Navbar() {
                 window.location.href = "/login" ;
               }}
             >
-<<<<<<< HEAD
+
               <span className="btn btn-primary logout " onClick={handleLogout}>Logout</span>
-=======
-              <span className="btn btn-primary" onClick={handleLogout}>Logout</span>
->>>>>>> 584405ec891779dda5c4a226bd384b33d3847ce7
+
+              
+
             </span>
           ) : null}
       </div>
